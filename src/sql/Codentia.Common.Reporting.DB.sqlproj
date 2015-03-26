@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Codentia.Common.Reporting.DB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{c00c5e9f-24ed-4f22-a20d-ae5f5b58a23b}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Codentia.Common.Reporting.DB</RootNamespace>
+    <AssemblyName>Codentia.Common.Reporting.DB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Common" />
+    <Folder Include="create" />
+    <Folder Include="Engine" />
+    <Folder Include="Common\Data" />
+    <Folder Include="Common\Data\Always" />
+    <Folder Include="Common\Data\Test" />
+    <Folder Include="Common\Functions" />
+    <Folder Include="Common\Schema" />
+    <Folder Include="Common\Schema\FK" />
+    <Folder Include="Common\Schema\IX" />
+    <Folder Include="Common\Schema\Tables" />
+    <Folder Include="Common\StoredProcedures" />
+    <Folder Include="Engine\Data" />
+    <Folder Include="Engine\Data\Always" />
+    <Folder Include="Engine\Data\Test" />
+    <Folder Include="Engine\Functions" />
+    <Folder Include="Engine\Schema" />
+    <Folder Include="Engine\Schema\FK" />
+    <Folder Include="Engine\Schema\IX" />
+    <Folder Include="Engine\Schema\Tables" />
+    <Folder Include="Engine\StoredProcedures" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="create\createdb.template" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Common\Data\Test\001_fn_TestImageFunction.sql" />
+    <None Include="Common\Data\Test\TestGetImagePath.sql" />
+    <None Include="Common\Data\Test\TestImageReport.sql" />
+    <None Include="Common\Data\Test\TestSPForImagePaths.sql" />
+    <None Include="Engine\StoredProcedures\DataLoad__Report_AddDataSource.sql" />
+    <None Include="Engine\StoredProcedures\DataLoad__ReportDataSource_AddParameter.sql" />
+    <None Include="Engine\StoredProcedures\Reporting_GetDataForReport.sql" />
+    <None Include="Engine\StoredProcedures\Reporting_GetDataSourcesForReport.sql" />
+    <None Include="Engine\StoredProcedures\Reporting_GetParametersForDataSource.sql" />
+    <None Include="Engine\StoredProcedures\Reporting_GetReports.sql" />
+    <None Include="Engine\StoredProcedures\Reporting_ReportDataSourceExistsById.sql" />
+    <None Include="Engine\StoredProcedures\Reporting_ReportExistsByCode.sql" />
+    <None Include="Engine\StoredProcedures\Reporting_ReportExistsById.sql" />
+    <None Include="Engine\Data\Always\001_AddParameterTypes.sql" />
+    <None Include="Engine\Data\Test\001_TestReportSP.sql" />
+    <None Include="Engine\Data\Test\002_TestReportSPWithParameters.sql" />
+    <None Include="Engine\Data\Test\003_TestParameterSPDropDown.sql" />
+    <None Include="Engine\Data\Test\004_TestParameterSPCheckBox.sql" />
+    <None Include="Engine\Data\Test\005_TestParameterSPRadioButton.sql" />
+    <None Include="Engine\Data\Test\006_PopulateReports.sql" />
+    <None Include="Engine\Data\Test\007_TestParameterSPWithoutIsDefaultColumn.sql" />
+    <None Include="Engine\Data\Test\008_MultiDSReport_NoParam.sql" />
+    <None Include="Engine\Data\Test\009_MultiDSReport_Param1.sql" />
+    <None Include="Engine\Data\Test\010_MultiDSReport_Param2.sql" />
+    <None Include="Engine\Data\Test\011_NoVisReport.sql" />
+    <None Include="Engine\Schema\FK\FK_ReportDataSource_ReportParameter__ReportDataSource_ReportDataSourceId.sql" />
+    <None Include="Engine\Schema\FK\FK_ReportDataSource_ReportParameter__ReportParameter_ReportParameterId.sql" />
+    <None Include="Engine\Schema\FK\FK_ReportParameter__ReportParameterType__ReportParameterTypeId.sql" />
+    <None Include="Engine\Schema\FK\FK_ReportParameter__SqlDbType__SqlDbTypeId.sql" />
+    <None Include="Engine\Schema\IX\UX_Report_ReportCode.sql" />
+    <None Include="Engine\Schema\IX\UX_ReportDataSource_ReportParameter_ReportDataSourceId_RenderOrder.sql" />
+    <None Include="Engine\Schema\IX\UX_ReportParameterType_ReportParameterTypeCode.sql" />
+    <None Include="Engine\Schema\Tables\Report.sql" />
+    <None Include="Engine\Schema\Tables\ReportDataSource.sql" />
+    <None Include="Engine\Schema\Tables\ReportDataSource_ReportParameter.sql" />
+    <None Include="Engine\Schema\Tables\ReportParameter.sql" />
+    <None Include="Engine\Schema\Tables\ReportParameterType.sql" />
+    <None Include="Engine\Schema\Tables\SqlDbType.sql" />
+  </ItemGroup>
+</Project>
