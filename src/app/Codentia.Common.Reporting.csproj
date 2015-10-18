@@ -38,24 +38,6 @@
     <DocumentationFile>bin\Release\MattchedIT.Common.Reporting.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Codentia.Common.Data">
-      <HintPath>..\..\packages\Codentia.Common.WebControls.dll.2.0.0-dev\lib\Codentia.Common.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Codentia.Common.Helper">
-      <HintPath>..\..\packages\Codentia.Common.WebControls.dll.2.0.0-dev\lib\Codentia.Common.Helper.dll</HintPath>
-    </Reference>
-    <Reference Include="Codentia.Common.Logging">
-      <HintPath>..\..\packages\Codentia.Common.WebControls.dll.2.0.0-dev\lib\Codentia.Common.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="Codentia.Common.Net">
-      <HintPath>..\..\packages\Codentia.Common.WebControls.dll.2.0.0-dev\lib\Codentia.Common.Net.dll</HintPath>
-    </Reference>
-    <Reference Include="Codentia.Common.Types">
-      <HintPath>..\..\packages\Codentia.Common.WebControls.dll.2.0.0-dev\lib\Codentia.Common.Types.dll</HintPath>
-    </Reference>
-    <Reference Include="Codentia.Common.WebControls">
-      <HintPath>..\..\packages\Codentia.Common.WebControls.dll.2.0.0-dev\lib\Codentia.Common.WebControls.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\..\packages\ReportViewer.Common.10.1.0.0\lib\Microsoft.ReportViewer.Common.dll</HintPath>
