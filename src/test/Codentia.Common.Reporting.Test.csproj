@@ -119,6 +119,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\app\Codentia.Common.Reporting.csproj">
+      <Project>{40318c9b-153d-44ff-b338-6475391f72c1}</Project>
+      <Name>Codentia.Common.Reporting</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(ProgramFiles)\MSBuild\StyleCop\v4.7\StyleCop.Targets" />
