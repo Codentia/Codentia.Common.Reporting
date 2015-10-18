@@ -38,6 +38,30 @@
     <DocumentationFile>bin\Release\MattchedIT.Common.Reporting.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Codentia.Common.Data, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Codentia.Common.Data.dll.4.0.0-dev-20151015210336\lib\Codentia.Common.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Codentia.Common.Helper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Codentia.Common.Helper.dll.2.0.0-dev-20151015190952\lib\Codentia.Common.Helper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Codentia.Common.Logging, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Codentia.Common.Logging.dll.3.0.0-dev-20151016124652\lib\Codentia.Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Codentia.Common.Net, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Codentia.Common.Net.dll.2.0.0-dev-20151016215353\lib\Codentia.Common.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Codentia.Common.Types, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Codentia.Common.Types.dll.2.0.0-dev-20151015203406\lib\Codentia.Common.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Codentia.Common.WebControls, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Codentia.Common.WebControls.dll.3.0.0-dev-20151017143305\lib\Codentia.Common.WebControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\..\packages\ReportViewer.Common.10.1.0.0\lib\Microsoft.ReportViewer.Common.dll</HintPath>
