@@ -40,33 +40,26 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Codentia.Common.Data, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Codentia.Common.Data.dll.4.0.0-dev-20151015210336\lib\Codentia.Common.Data.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Codentia.Common.Data">
+      <HintPath>..\..\packages\Codentia.Common.Data.dll.4.0.0-dev-20160216094829\lib\Codentia.Common.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Codentia.Common.Helper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Codentia.Common.Helper.dll.2.0.0-dev-20151015190952\lib\Codentia.Common.Helper.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Codentia.Common.Helper">
+      <HintPath>..\..\packages\Codentia.Common.Helper.dll.2.0.0-dev-20160216102655\lib\Codentia.Common.Helper.dll</HintPath>
     </Reference>
-    <Reference Include="Codentia.Common.Logging, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Codentia.Common.Logging.dll.3.0.0-dev-20151016124652\lib\Codentia.Common.Logging.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Codentia.Common.Logging">
+      <HintPath>..\..\packages\Codentia.Common.Logging.dll.3.0.0-dev-20160216095044\lib\Codentia.Common.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="Codentia.Common.Net, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Codentia.Common.Net.dll.2.0.0-dev-20151016215353\lib\Codentia.Common.Net.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Codentia.Common.Net">
+      <HintPath>..\..\packages\Codentia.Common.Net.dll.2.0.0-dev-20160216103103\lib\Codentia.Common.Net.dll</HintPath>
     </Reference>
-    <Reference Include="Codentia.Common.Types, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Codentia.Common.Types.dll.2.0.0-dev-20151015203406\lib\Codentia.Common.Types.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Codentia.Common.Types">
+      <HintPath>..\..\packages\Codentia.Common.Types.dll.2.0.0-dev-20160216094650\lib\Codentia.Common.Types.dll</HintPath>
     </Reference>
-    <Reference Include="Codentia.Common.WebControls, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Codentia.Common.WebControls.dll.3.0.0-dev-20151017143305\lib\Codentia.Common.WebControls.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Codentia.Common.WebControls">
+      <HintPath>..\..\packages\Codentia.Common.WebControls.dll.3.0.0-dev-20160216103231\lib\Codentia.Common.WebControls.dll</HintPath>
     </Reference>
-    <Reference Include="Codentia.Test, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Codentia.Test.dll.2.0.0-dev-20151016071421\lib\Codentia.Test.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Codentia.Test">
+      <HintPath>..\..\packages\Codentia.Test.dll.2.0.0-dev-20160216094935\lib\Codentia.Test.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -107,7 +100,9 @@
     <None Include="Codentia.Common.Reporting.Test.dll.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="rdl\IMAGETEST.rdl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
