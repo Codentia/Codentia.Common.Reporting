@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -36,37 +36,37 @@
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
-    <DocumentationFile>bin\Release\MattchedIT.Common.Reporting.Test.XML</DocumentationFile>
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Codentia.Common.Data">
-      <HintPath>..\..\packages\Codentia.Common.Data.dll.4.0.0-dev-20160216094829\lib\Codentia.Common.Data.dll</HintPath>
+      <HintPath>..\..\packages\Codentia.Common.Data.dll.4.0.0.4\lib\Codentia.Common.Data.dll</HintPath>
     </Reference>
     <Reference Include="Codentia.Common.Helper">
-      <HintPath>..\..\packages\Codentia.Common.Helper.dll.2.0.0-dev-20160216102655\lib\Codentia.Common.Helper.dll</HintPath>
+      <HintPath>..\..\packages\Codentia.Common.Helper.dll.2.0.0.3\lib\Codentia.Common.Helper.dll</HintPath>
     </Reference>
     <Reference Include="Codentia.Common.Logging">
-      <HintPath>..\..\packages\Codentia.Common.Logging.dll.3.0.0-dev-20160216095044\lib\Codentia.Common.Logging.dll</HintPath>
+      <HintPath>..\..\packages\Codentia.Common.Logging.dll.3.0.0.1\lib\Codentia.Common.Logging.dll</HintPath>
     </Reference>
     <Reference Include="Codentia.Common.Net">
-      <HintPath>..\..\packages\Codentia.Common.Net.dll.2.0.0-dev-20160216103103\lib\Codentia.Common.Net.dll</HintPath>
+      <HintPath>..\..\packages\Codentia.Common.Net.dll.1.1.2.77\lib\Codentia.Common.Net.dll</HintPath>
     </Reference>
     <Reference Include="Codentia.Common.Types">
-      <HintPath>..\..\packages\Codentia.Common.Types.dll.2.0.0-dev-20160216094650\lib\Codentia.Common.Types.dll</HintPath>
+      <HintPath>..\..\packages\Codentia.Common.Types.dll.2.0.0.5\lib\Codentia.Common.Types.dll</HintPath>
     </Reference>
-    <Reference Include="Codentia.Common.WebControls">
-      <HintPath>..\..\packages\Codentia.Common.WebControls.dll.3.0.0-dev-20160216103231\lib\Codentia.Common.WebControls.dll</HintPath>
+    <Reference Include="Codentia.Common.WebControls, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Codentia.Common.WebControls.dll.3.0.0.2\lib\Codentia.Common.WebControls.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Codentia.Test">
-      <HintPath>..\..\packages\Codentia.Test.dll.2.0.0-dev-20160216094935\lib\Codentia.Test.dll</HintPath>
+      <HintPath>..\..\packages\Codentia.Test.dll.2.0.0.1\lib\Codentia.Test.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\ReportViewer.Common.10.1.0.0\lib\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\MicrosoftReportViewerWebForms_v10.1.0.0\lib\Microsoft.ReportViewer.WebForms.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
@@ -100,9 +100,7 @@
     <None Include="Codentia.Common.Reporting.Test.dll.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="packages.config" />
     <Content Include="rdl\IMAGETEST.rdl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -112,6 +110,8 @@
     <Content Include="rdl\TestRDL.rdl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\app\Codentia.Common.Reporting.csproj">
